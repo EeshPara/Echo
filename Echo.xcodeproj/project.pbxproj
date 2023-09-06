@@ -14,6 +14,7 @@
 		AF3264AD2AA7E75500E93A6D /* EchoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3264AC2AA7E75500E93A6D /* EchoTests.swift */; };
 		AF3264B72AA7E75500E93A6D /* EchoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3264B62AA7E75500E93A6D /* EchoUITests.swift */; };
 		AF3264B92AA7E75500E93A6D /* EchoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3264B82AA7E75500E93A6D /* EchoUITestsLaunchTests.swift */; };
+		AF35445C2AA8029800924ABE /* SwiftyTranslate in Frameworks */ = {isa = PBXBuildFile; productRef = AF35445B2AA8029800924ABE /* SwiftyTranslate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		AF3264B22AA7E75500E93A6D /* EchoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3264B62AA7E75500E93A6D /* EchoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoUITests.swift; sourceTree = "<group>"; };
 		AF3264B82AA7E75500E93A6D /* EchoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF3544562AA7F67800924ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF35445C2AA8029800924ABE /* SwiftyTranslate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		AF32649A2AA7E75000E93A6D /* Echo */ = {
 			isa = PBXGroup;
 			children = (
+				AF3544562AA7F67800924ABE /* Info.plist */,
 				AF32649B2AA7E75000E93A6D /* EchoApp.swift */,
 				AF32649D2AA7E75000E93A6D /* ContentView.swift */,
 				AF32649F2AA7E75500E93A6D /* Assets.xcassets */,
@@ -143,6 +147,9 @@
 			dependencies = (
 			);
 			name = Echo;
+			packageProductDependencies = (
+				AF35445B2AA8029800924ABE /* SwiftyTranslate */,
+			);
 			productName = Echo;
 			productReference = AF3264982AA7E75000E93A6D /* Echo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +222,9 @@
 				Base,
 			);
 			mainGroup = AF32648F2AA7E75000E93A6D;
+			packageReferences = (
+				AF35445A2AA8029800924ABE /* XCRemoteSwiftPackageReference "SwiftyTranslate" */,
+			);
 			productRefGroup = AF3264992AA7E75000E93A6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,6 +430,9 @@
 				DEVELOPMENT_TEAM = 3TWD3N634U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Echo/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"we need this to transcribe\"";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to transcribe recorded audio.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +462,9 @@
 				DEVELOPMENT_TEAM = 3TWD3N634U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Echo/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"we need this to transcribe\"";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to transcribe recorded audio.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF35445A2AA8029800924ABE /* XCRemoteSwiftPackageReference "SwiftyTranslate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cpageler93/SwiftyTranslate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF35445B2AA8029800924ABE /* SwiftyTranslate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF35445A2AA8029800924ABE /* XCRemoteSwiftPackageReference "SwiftyTranslate" */;
+			productName = SwiftyTranslate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF3264902AA7E75000E93A6D /* Project object */;
 }
